@@ -24,7 +24,7 @@ class Player:
     # returns true if collision, false otherwise
     def checkCollision(self, objs, direction):
 
-        player_rect = pygame.Rect(self.x, self.y, 64, 64)
+        player_rect = pygame.Rect(self.x, self.y, self.width, self.height)
         for obj in objs:
             temp_rec = pygame.Rect(obj.x, obj.y, obj.width, obj.height)
             if player_rect.colliderect(temp_rec):
